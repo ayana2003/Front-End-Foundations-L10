@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Website - Lesson 10 Hands-On</title>
+
+        <!--Bootstraps link-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/flatly/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+
+        <!--jQuery library link-->
+        <script type= "text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </head>
+    
+    <body>
+
+<!-- jumbotron-->
+        <div class="jumbotron jumbotron">
+            <div class="container">
+                <div class="jumbotron">
+                    <h1 class="display-4">Ayana Labossiere Burks</h1>
+                    <p class="lead">Full Stack Developer / Engineer</p>
+                    <hr class="my-4">
+                    <p>Welcome to my page! Please look around to learn more about me.</p>
+                    <p class="lead">
+                    <button id="bitmoji" class="btn btn-primary btn-lg" type="button">Click to see my Avatar!</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+     
+
+        <div class="container">
+ <!-- Social Media Nav Bar Icons-->   
+            <nav class="navbar">
+                <div class="container-fluid">
+                  <a class="linked-in-social" href="https://www.linkedin.com/in/ayana-labossiere-burks-68385311" target="_blank">
+                    <img class="social-media" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaOJXLxjuPFvRvcbQzDkJUrAiqhfG710XpZQ&usqp=CAU" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                  </a>
+                  <a class="github-social" href="https://github.com/ayana2003" target="_blank">
+                    <img class="social-media" src="data:image/png;base64,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" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                  </a>
+                  <a class="facebook-social" href="https://www.facebook.com/ayana.dion.5/" target="_blank">
+                    <img class="social-media" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRORvGcjglQ8ZV64xYynZIZJBlzsRidDm9duw&usqp=CAU" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                  </a>
+                  <a class="instagram-social" href="https://www.instagram.com/thrive_and_be_whole/" target="_blank">
+                    <img class="social-media" src="data:image/png;base64,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" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                  </a>
+                </div>
+              </nav>
+        
+ <!-- Headshot-->   
+            <div id="target-headshot">
+                <div id="main-pic">
+                    <img id="headshot" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/65016723_10104511757583432_4728050005464580096_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=NToZYAnlx1YAX8SEeKf&_nc_ht=scontent-sjc3-1.xx&oh=00_AT9ZfJftgcBsWc8BbL5VdFG4ZfNacDK7SDuwIT2b1qSTog&oe=63595AA9">
+                </div>
+            </div>
+            <br>
+<!-- Tech Skills- accordion or image boxes-->
+            <br>
+            <div class="experience">
+                <h3>My Skills and Background</h3>
+                <p>Click below to learn more about my skills and background.</p>
+                <br>
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                        Tech-Related Skills
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body">
+                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                    </div>
+                    </div>
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                        Educational Background
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                        <div class="accordion-body">
+                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                    </div>
+                    </div>
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                        Soft Skills
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                        <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <br>
+
+
+<!-- Image Carousel-->
+            <div class="joy">
+                <h3>What Brings me Joy</h3>
+                <br>
+                <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="ayana-pics" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/65016723_10104511757583432_4728050005464580096_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=NToZYAnlx1YAX8SEeKf&_nc_ht=scontent-sjc3-1.xx&oh=00_AT9ZfJftgcBsWc8BbL5VdFG4ZfNacDK7SDuwIT2b1qSTog&oe=63595AA9" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="ayana-pics" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/292395481_2169875453223001_3817709847401475013_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=igDgpe_sYp0AX-YNJ2l&_nc_ht=scontent-sjc3-1.xx&oh=00_AT9kt7nI5iOoNCCISrQx0B7Iaf0-yu1oHsBbuHU1_BwVzg&oe=633A81C2" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="ayana-pics" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/292361861_2169875466556333_7303680229135802267_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=DUbtFrka9qkAX-o0afy&tn=tOnNKBr3rGH4M33i&_nc_ht=scontent-sjc3-1.xx&oh=00_AT8Qkn5VGUNc69zURE0_I6P8QHnNqPKKYiK4XE3mV7xXeg&oe=633A0709" class="d-block w-100" alt="...">
+                    </div>
+                    </div>
+                </div>
+            
+        
+
+
+<!-- Clickable Social Icons-->
+                <div class="icons">
+                    <!--LinkedIn-->
+                    <a class="social-icon" href="https://www.linkedin.com/in/ayana-labossiere-burks-68385311" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                        </svg>
+                    </a>
+                    <!--GitHub-->
+                    <a class="social-icon" href="https://github.com/ayana2003" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                    </a>
+                    <!--Facebook-->
+                    <a class="social-icon" href="https://www.facebook.com/ayana.dion.5/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                        </svg>
+                    </a>
+                    <!--Instagram- CHANGE LINK AND ICON-->
+                    <a class="social-icon" href="https://www.instagram.com/thrive_and_be_whole/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>    
+
+<!-- AJAX & Github-->
+            <div class="github">   
+                <br>         
+                <h3>My Basic GitHub Info</h3>                       
+                <p>This is my GitHub username:</p>
+                <p id="username"></p>
+                <p>This is my GitHub email:</p>
+                <p id="email"></p>
+            
+                <br>
+                <button type="button" class="btn btn btn-lg" id="driver" value="load data">Click here to see my Full GitHub Info!</button>
+                <br>
+                <p id="githubInfo"></p>
+
+
+            </div>
+        </div>
+
+<!-- Sticky Footer-->   
+         <nav class="navbar-sticky-footer">
+            <h5>My Contact Info</h5>
+            <br>
+            <div class="container-fluid">
+                <img class="contact-icon" src="data:image/png;base64,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" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">Phone: (510)717-4001 
+                
+                <img class="contact-icon" src="data:image/png;base64,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" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">Email: adlabossiere@gmail.com
+
+            </div>
+          </nav>
+
+<!--jQuery link-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+
+
+
+</html>
+
